@@ -2,7 +2,7 @@ import conf from "../config/config";
 
 import { Client, Account, ID } from "appwrite";
 
-class AuthService { 
+export class AuthService { 
     client = new Client();
     account;
 
@@ -11,7 +11,7 @@ class AuthService {
         .setEndpoint(conf.appwriteUrl)
         .setProject(conf.appwriteProjectId);
 
-        this.account = new Account(this.client)
+        this.account = new Account(this.client);
     }
 
     async createAccount({email, password, name}) {
