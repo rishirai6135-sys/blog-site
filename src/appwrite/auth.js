@@ -38,14 +38,11 @@ export class AuthService {
     }
 
     async getCurrUser() {
-
         try {
             return await this.account.get();
         } catch (error) {
             throw error;
         }
-
-        return null;
     }
 
     async logout() {
@@ -58,7 +55,7 @@ export class AuthService {
 }
 
 
-const authServie = new AuthService();
+const authService = new AuthService();
 
 
-export default authServie;
+export default authService;
